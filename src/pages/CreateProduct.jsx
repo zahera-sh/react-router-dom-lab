@@ -25,7 +25,7 @@ function CreateProduct() {
         try {
 
             const createdProduct = await createProduct(formData);
-            navigate("/products");
+            navigate(`/products/${createdProduct._id}`);
 
         } catch (err) {
             console.log(err);
