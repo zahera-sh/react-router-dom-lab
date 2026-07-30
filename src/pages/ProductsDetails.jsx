@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getOneProduct } from '../services/productServices';
+import { Spin } from 'antd'
 
 function ProductsDetails() {
 
@@ -43,7 +44,7 @@ function ProductsDetails() {
                         <p>Id: {product._id}</p>
                     </>)
 
-                    : <p>Loading...</p>}
+                    : <Spin spinning={true} size='large' />}
 
             </div>
 
